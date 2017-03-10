@@ -19,7 +19,15 @@ div {
   li {
     text-align: left;
     font-size: .75em;
+    list-style: none;
   }
+
+  /*li input[type="checkbox"] {
+
+      text-align: left;
+      font-size: .75em;
+      list-style: none;
+    }*/
 
   h1 {
     text-align: center;

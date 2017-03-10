@@ -18,4 +18,8 @@ $scope.addText = function() {
     $scope.toDoList.push({name:$scope.addToDo});
 }
 
+$scope.done= function() {
+    $scope.toDoList.push({name:$scope.checkBox});
+}
+
 });

@@ -9,7 +9,9 @@
   </head>
   <body ng-app = "toDoListModule" ng-controller="simpleController">
     <div>
+
       <h1>To Do List<h1>
+
     <section>
       <input type="text" ng-model="filterInput" placeholder ="filter" id= "input">
       <!-- <button type="button" name="filter">Filter</button> -->
@@ -18,10 +20,15 @@
       <input type="text" ng-model="addToDo">
       <button type="button" name="add" ng-click ="addText()">Add</button>
     </section>
+
       <ul>
         <li ng-repeat="todo in toDoList | filter: filterInput | orderBy: 'name'">{{ todo.name }} {{ todo.importance }} </li>
-
       </ul>
+
+
+       <input type="checkbox" ng-model="done"><li ng-repeat="todo in toDoList | filter: filterInput | orderBy: 'name'">{{ todo.name }} {{ todo.importance }} </li>
+{{ todo.name }} {{ todo.importance }}</input>
+
     </div>
 
 
