@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>To Do</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.min.js"></script>
+    <link href="style.css" type="text/css" rel="stylesheet" />
+    <script src="script.js" charset="utf-8"></script>
+  </head>
+  <body ng-app = "toDoListModule" ng-controller="simpleController">
+    <div>
+      <h1>To Do List<h1>
+    <section>
+      <input type="text" ng-model="filterInput" placeholder ="filter" id= "input">
+      <!-- <button type="button" name="filter">Filter</button> -->
+      <br>
+
+      <input type="text" ng-model="addToDo">
+      <button type="button" name="add" ng-click ="addText()">Add</button>
+    </section>
+      <ul>
+        <li ng-repeat="todo in toDoList | filter: filterInput | orderBy: 'name'">{{ todo.name }} {{ todo.importance }} </li>
+
+      </ul>
+    </div>
+
+
+
+  </body>
+</html>
